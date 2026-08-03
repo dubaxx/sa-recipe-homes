@@ -1,0 +1,18 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.1.0
+Date: 2026-08-02
+  Features:
+    - Foundry can craft engine units.
+    - Electromagnetic plant can craft electric engine units and flying robot frames.
+    - Biochamber can craft lubricant and the three oil-based solid fuel recipes.
+    - Cryogenic plant can run basic and advanced oil processing and coal liquefaction.
+    - New foundry recipes: casting barrel and casting uranium fuel cell, unlocked with the foundry.
+    - Startup setting to let the cryogenic plant run the uranium chain. Off by default.
+    - Startup setting to let planet buildings craft the six pre-2.0 science packs. Off by default.
+    - Startup setting for batteries in the electromagnetic plant, as an addition or as a move off the cryogenic plant. Off by default.
+    - Foundry can craft rails, storage tanks, pumps, steel chests, steam engines and turbines, heat pipes and exchangers, electric mining drills, pumpjacks, gun turrets and flamethrower turrets.
+    - New foundry recipe: casting refined concrete. Vanilla casts plain concrete but not refined.
+    - Electromagnetic plant can craft radar, lamps, all four combinators, display panels, programmable speakers, power switches and laser turrets.
+    - Cryogenic plant can craft the atomic bomb.
+    - Startup setting for rolling stock in the foundry. Off by default.
+    - Startup setting for personal equipment in the electromagnetic plant. Off by default.

@@ -1,0 +1,4 @@
+*.zip
+mod-settings.dat
+__pycache__/
+.DS_Store
