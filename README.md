@@ -58,10 +58,10 @@ Everything under `src/` ships. Everything outside it is development: this README
 
 ## Install
 
-Symlink `src` into the mods folder under a `name_version` name. Give `ln` both arguments, or it creates the link in whatever directory you are standing in:
+Symlink `src` into the mods folder. Name the link `sa-recipe-homes` with no version suffix: Factorio accepts either `name` or `name_version` for a directory, and the versioned form has to be renamed on every bump or the game refuses to load with "Directory name of mod ... doesn't match the expected". Give `ln` both arguments, or it creates the link in whatever directory you are standing in:
 
 ```bash
-ln -s ~/personal/sa-recipe-homes/src ~/Library/Application\ Support/factorio/mods/sa-recipe-homes_0.1.0
+ln -s ~/personal/sa-recipe-homes/src ~/Library/Application\ Support/factorio/mods/sa-recipe-homes
 ```
 
 ```bash
