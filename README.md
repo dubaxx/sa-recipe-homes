@@ -52,12 +52,16 @@ Needs Space Age, and 2.1.7 or later where recipes carry a `categories` array.
 
 Plate smelting, gears, iron sticks and low density structures already have foundry casting recipes, and the old recipe staying in an assembler is the point of that upgrade path. Rocket parts stay in the silo. Space Age's own recipes are out of scope, though tungsten carbide, holmium solution and lithium plate have the same problem: a planet's signature item that needs a building from somewhere else.
 
+## Layout
+
+Everything under `src/` ships. Everything outside it is development: this README, the license, the portal copy, the locale checker, the build script and the workflow. `build.sh` zips `src/` and nothing else, so the two can never drift.
+
 ## Install
 
-Symlink this directory into the mods folder under a `name_version` name. Give `ln` both arguments, or it creates the link in whatever directory you are standing in:
+Symlink `src` into the mods folder under a `name_version` name. Give `ln` both arguments, or it creates the link in whatever directory you are standing in:
 
 ```bash
-ln -s ~/personal/sa-recipe-homes ~/Library/Application\ Support/factorio/mods/sa-recipe-homes_0.1.0
+ln -s ~/personal/sa-recipe-homes/src ~/Library/Application\ Support/factorio/mods/sa-recipe-homes_0.1.0
 ```
 
 ```bash
@@ -84,10 +88,28 @@ Three things that will waste your time otherwise:
 - Startup settings are cached in `mod-settings.dat` in the mod directory. Changing a `default_value` does nothing until you delete that file.
 - Locale is read at startup, so a changed .cfg needs a restart.
 
-## Packaging
-
-The zip must contain a single `sa-recipe-homes_<version>` folder, and the docs and the checker script should not ship:
+## Building
 
 ```bash
-rm -f sa-recipe-homes_0.1.0/*.md sa-recipe-homes_0.1.0/*.py && zip -rq sa-recipe-homes_0.1.0.zip sa-recipe-homes_0.1.0 -x '.*' '*/.*'
+./build.sh
+```
+
+Reads the name and version out of `src/info.json`, writes `build/sa-recipe-homes_<version>.zip` and prints the path.
+
+## Releasing
+
+1. Bump `version` in `src/info.json`.
+2. Add a block to `src/changelog.txt`. The separator is exactly 99 dashes and the format is strict.
+3. Commit, then tag and push:
+
+```bash
+git tag v0.1.1 && git push origin main v0.1.1
+```
+
+The `Release` workflow takes it from there: it refuses to run if `src/info.json` disagrees with the tag, runs the locale checker, builds, creates the GitHub release with the zip attached, and uploads to the mod portal.
+
+The portal step needs a repository secret named `FACTORIO_API_KEY`, created at https://factorio.com/profile with the **ModPortal: Upload Mods** scope. Upload and publish are different scopes; publish is only for registering a mod that does not exist yet, which is a one-time thing already done for this mod.
+
+```bash
+gh secret set FACTORIO_API_KEY
 ```

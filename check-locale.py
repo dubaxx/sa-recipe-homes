@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
-"""Check locale/en/strings.cfg against the prototypes and settings the mod defines.
+"""Check src/locale/en/strings.cfg against the prototypes and settings the mod defines.
 
 A missing key shows up in game as "Unknown key: ..." on the tooltip, and nothing in the data stage catches it.
-Run from the mod directory: python3 check-locale.py
+Run from the repository root: python3 check-locale.py
 """
 
 import re
 import sys
 
-data = open("data.lua").read()
-settings = open("settings.lua").read()
-cfg = open("locale/en/strings.cfg").read()
+data = open("src/data.lua").read()
+settings = open("src/settings.lua").read()
+cfg = open("src/locale/en/strings.cfg").read()
 
 
 def section(name):
