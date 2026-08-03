@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.1
+Date: 2026-08-02
+  Changes:
+    - No gameplay changes. Corrects the author field, ships the license with the mod and links the source repository.
+---------------------------------------------------------------------------------------------------
 Version: 0.1.0
 Date: 2026-08-02
   Features:
