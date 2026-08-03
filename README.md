@@ -1,5 +1,7 @@
 # Space Age Recipe Homes
 
+[On the mod portal](https://mods.factorio.com/mod/sa-recipe-homes) | MIT licensed
+
 Space Age hands recipes to the new planet buildings by tagging them with a crafting category. It did this for 41 base recipes in `space-age/base-data-updates.lua` and then stopped, which is why you still park an assembler next to a foundry for engine units.
 
 Oil is the one that got me. Every planet got a building and Nauvis refining sat there untouched since 1.1. The refinery is the only production stage from the old game with no successor anywhere in the expansion.
