@@ -2,7 +2,7 @@
   "name": "sa-recipe-homes",
   "version": "0.1.0",
   "title": "Space Age Recipe Homes",
-  "author": "lonestar",
+  "author": "dubax",
   "homepage": "https://github.com/dubaxx/sa-recipe-homes",
   "factorio_version": "2.1",
   "description": "Gives pre-2.0 intermediate recipes a home in the Space Age planet buildings: the engine chain in the foundry and electromagnetic plant, oil processing in the cryogenic plant, lubricant and solid fuel in the biochamber. Optional settings for the uranium chain and the old science packs.",
